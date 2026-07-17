@@ -144,6 +144,7 @@
     pointer-events: none;
     transition: all 0.7s ease;
     overflow: hidden;
+    z-index: 8;
   }
 
   .header .container .navigation.open {
@@ -170,5 +171,42 @@
 
   .header .container .navigation .list-item li.active::before {
     background: var(--color-light);
+  }
+
+  /* <-- HERO ---> */
+
+  .hero {
+    padding-top: 8.9rem;
+    min-height: auto;
+  }
+
+  .hero .container {
+    display: flex;
+    align-items: end;
+    position: relative;
+  }
+
+  .hero .container h1 {
+    font-size: 4.8rem;
+    font-weight: 200;
+    line-height: 95%;
+    max-width: 500px;
+  }
+
+  .hero .container h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-accent);
+    font-family: var(--font-space);
+    text-transform: uppercase;
+    padding-bottom: 1.6rem;
+  }
+
+  .hero .container img {
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: -200px;
+    right: -50px;
+    z-index: -1;
   }
 }

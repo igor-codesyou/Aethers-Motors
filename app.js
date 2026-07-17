@@ -1,3 +1,5 @@
+// MOBILE MENU
+
 const navigation = document.getElementById("navbar");
 const toggleButton = document.getElementById("toggle");
 
@@ -9,14 +11,19 @@ toggleButton.addEventListener("click", openMenu);
 
 // LINKS
 
-const link = document.querySelectorAll(".list-item .item");
+function headerBefore() {
+  const link = document.querySelectorAll(".list-item .item");
 
-link.forEach(function (e) {
-  e.addEventListener("click", function () {
-    link.forEach((e) => {
-      e.classList.remove("active");
+  link.forEach(function (e) {
+    e.addEventListener("click", function () {
+      link.forEach((e) => {
+        e.classList.remove("active");
+      });
+
+      e.classList.add("active");
+      navigation.classList.remove("open");
     });
-
-    e.classList.add("active");
   });
-});
+}
+
+headerBefore();
