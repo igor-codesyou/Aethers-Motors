@@ -25,5 +25,18 @@ function headerBefore() {
     });
   });
 }
-
 headerBefore();
+
+// HEADER BLUR
+
+const header = document.querySelector(".header");
+
+function headerBlur() {
+  if (window.scrollY > 50) {
+    header.classList.add("blur");
+  } else {
+    header.classList.remove("blur");
+  }
+}
+
+window.addEventListener("scroll", headerBlur);
